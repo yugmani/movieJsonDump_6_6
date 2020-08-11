@@ -1,0 +1,45 @@
+.container{
+    height:100vh;
+    width:100%;
+}
+
+.form-title {
+    margin-top:10px;
+    margin-bottom:35px;
+}
+
+.col-4 {
+    height:100vh;
+}
+
+#movie-input,
+#find-movie {
+    display: block;
+    width:100%;
+}
+
+.search-bar {
+    background-color:lightgray;
+}
+
+.poster-bar {
+    background-color:gray;
+}
+
+.info-bar {
+    background-color:whitesmoke;
+}
+
+.search-list{
+    margin-top:20px;
+    
+}
+
+.search-list >h5 {
+    text-transform:capitalize;
+    margin-top:10px;
+    padding-top:5px;
+    margin-bottom:10px;
+    padding-bottom:5px;
+    border-top:1px solid darkgray;
+}
