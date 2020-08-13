@@ -11,12 +11,6 @@ $("#find-movie").on("click", function(event) {
   // Here we grab the text from the input box
   var movie = $("#movie-input").val();
 
-  
-  var newSearch = document.createElement("h5");
-  newSearch.textContent = movie;
-  $(".search-list").append(newSearch);
- 
- 
 
   // Here we construct our URL
   var queryURL = "https://www.omdbapi.com/?t=" + movie + "&apikey=trilogy";
@@ -33,11 +27,24 @@ $("#find-movie").on("click", function(event) {
       url:queryURL,
       method: "GET"
   }).then(function(response){
-      
-      // console.log(response.Runtime);
-      // $("#movie-view").text(JSON.stringify(response));
-     
-      displayMovie(response);
+      if (response.Error){
+        // let msg = $("<h2>");
+        let msg = `${movie}: This ${response.Error}`;
+        $(".search-list").text(msg);
+        $("#movie-info").text(msg);
+        $("#movie-view").text(msg);
+        // console.log(response.Error);
+      }
+      else {
+          // $("#movie-view").text(JSON.stringify(response));
+        // console.log(response.Runtime);
+        var newSearch = document.createElement("h5");
+        newSearch.textContent = movie;
+        $(".search-list").append(newSearch);
+        
+        displayMovie(response);
+      }
+    //   
   });
 
 
