@@ -10,9 +10,9 @@
 </head>
 
 <body>
-  <div class="container">
+  <div class="container-fluid">
       <div class="row">
-    <div class="col-4 search-bar">
+        <div class="col-12 col-lg-4 search-bar">
         <h1 class="form-title text-left">Movie Search</h1>
 
         <!-- This form will be where users input data about the movies -->
@@ -27,14 +27,14 @@
 
         </div>
     </div>
-    <div class="col-4 poster-bar">
+    <div class="col-12 col-lg-4 poster-bar">
         <!-- We'll be dumping our JSON contents in here -->
         <div id="movie-view"></div>
     </div>
 
-    <div class="col-4 info-bar">
+    <div class="col-12 col-lg-4 info-bar">
         <!-- We'll be dumping our JSON contents in here -->
-        <div id="movie-info"></div>
+        <div id="movie-info" class="mt-2"></div>
     </div>
 </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

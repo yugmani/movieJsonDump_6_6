@@ -9,7 +9,7 @@ $("#find-movie").on("click", function(event) {
 
   
   // Here we grab the text from the input box
-  var movie = $("#movie-input").val();
+  var movie = $("#movie-input").val().trim();
 
 
   // Here we construct our URL
@@ -52,14 +52,14 @@ $("#find-movie").on("click", function(event) {
       const actors = data.Actors.split(",");
       
       let html = `
-      <div class="card" style="width: 22rem;">
+      <div class="card">
           <div class="card-body">
           
           <img src=${data.Poster} class="card-img-top" alt="movie poster">
           <p class="card-text">${data.Plot}</p>
       </div>`
       $("#movie-view").html(html);
-
+      // style="width: 22rem;"
       let ht = `
       <h1 class="card-title text-uppercase">${data.Title}</h1>
       <ul class="list-group list-group-flush">

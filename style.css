@@ -1,6 +1,6 @@
-.container{
+.container-fluid {
     height:100vh;
-    width:100%;
+    background-color:whitesmoke;
 }
 
 .form-title {
@@ -8,8 +8,8 @@
     margin-bottom:35px;
 }
 
-.col-4 {
-    height:100vh;
+.col-lg-4 {
+    height:auto;
 }
 
 #movie-input,
@@ -27,7 +27,7 @@
 }
 
 .info-bar {
-    background-color:whitesmoke;
+    background-color:lightgray;;
 }
 
 .search-list{
@@ -42,4 +42,18 @@
     margin-bottom:10px;
     padding-bottom:5px;
     border-top:1px solid darkgray;
+}
+
+@media only screen and (max-width: 600px) {
+
+    img.card-img-top {
+        justify-content: ceter;
+        width:100%;
+        height:auto;
+    }
+    
+    .col-12
+    {
+        height:auto;
+    }
 }
